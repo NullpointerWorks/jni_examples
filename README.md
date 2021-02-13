@@ -1,7 +1,6 @@
 # JNI Examples
 A collection of examples of how to implement the Java Native Interface with a C++ written Dynamic Link Library.
 
-# Examples
 ## Example01
 * Makes a Java method call to return a String from the DLL. 
 
