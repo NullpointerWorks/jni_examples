@@ -12,3 +12,6 @@ A collection of examples of how to implement the Java Native Interface with a C+
 
 ## Example04
 * The DLL returns some primitives we can use in a Java application.
+
+## Example05
+* A more complicated example where a JNI DLL loads and utilizes another DLL.
