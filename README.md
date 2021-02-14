@@ -15,6 +15,3 @@ A collection of examples of how to implement the Java Native Interface with a C+
 
 ## Example05
 * A more complicated example where a JNI DLL loads and utilizes another DLL.
-
-## Example06
-* Creating multiple instances of Java classes with a native method.
