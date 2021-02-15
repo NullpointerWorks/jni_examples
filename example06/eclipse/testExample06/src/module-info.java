@@ -1,0 +1,2 @@
+module testExample06C {
+}

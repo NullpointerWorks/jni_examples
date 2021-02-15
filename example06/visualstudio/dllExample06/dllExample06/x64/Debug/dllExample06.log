@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  dllmain.cpp
+  Information.cpp
+  InformationFactory.cpp
+  Generating Code...
+     Creating library F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.lib and object F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.exp
+  dllExample06.vcxproj -> F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.dll
