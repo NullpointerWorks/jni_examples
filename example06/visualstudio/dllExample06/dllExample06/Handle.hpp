@@ -24,4 +24,9 @@ inline void setHandle(JNIEnv* env, jobject obj, T* t)
     env->SetLongField(obj, getHandleField(env, obj), handle);
 }
 
+inline void setHandle(JNIEnv* env, jobject obj, jlong v)
+{
+    env->SetLongField(obj, getHandleField(env, obj), v);
+}
+
 #endif

@@ -44,6 +44,7 @@ JNIEXPORT void JNICALL Java_example06C_Information_dispose
 (JNIEnv* env, jobject obj)
 {
     IInformation* nfo = getHandle<IInformation>(env, obj);
+    setHandle(env, obj, 0L);
     delete nfo;
 }
 
@@ -71,5 +72,6 @@ JNIEXPORT void JNICALL Java_example06C_InformationFactory_dispose
 (JNIEnv* env, jobject obj)
 {
     IInformationFactory* factory = getHandle<IInformationFactory>(env, obj);
+    setHandle(env, obj, 0L);
     delete factory;
 }

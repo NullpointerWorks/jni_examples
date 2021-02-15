@@ -1,3 +1,4 @@
-﻿  dllmain.cpp
-     Creating library F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.lib and object F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.exp
+﻿  Information.cpp
+  dllmain.cpp
+  Generating Code...
   dllExample06.vcxproj -> F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.dll
