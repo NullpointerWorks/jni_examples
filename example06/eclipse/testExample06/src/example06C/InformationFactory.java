@@ -1,9 +1,10 @@
 package example06C;
 
-public class InformationFactory implements AutoCloseable
+/**
+ * Though this simple factory also has a native pointer, it's not necessary in this implementation.
+ */
+public class InformationFactory extends NativePointer
 {
-	private long nativePointer;
-	
 	public InformationFactory()
 	{
 		initialize();
@@ -18,11 +19,7 @@ public class InformationFactory implements AutoCloseable
 	
 	private native void initialize();
 	private native long newInformationNative(String info);
-	private native void dispose();
 	
 	@Override
-	public void close() throws Exception 
-	{
-		dispose();
-	}
+	protected native void dispose();
 }
