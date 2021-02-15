@@ -1,6 +1,6 @@
 package example06C;
 
-public class InformationFactory 
+public class InformationFactory implements AutoCloseable
 {
 	private long nativePointer;
 	
@@ -18,7 +18,11 @@ public class InformationFactory
 	
 	private native void initialize();
 	private native long newInformationNative(String info);
+	private native void dispose();
 	
-	//public native void dispose();
-	//public void finalize() {dispose();}
+	@Override
+	public void close() throws Exception 
+	{
+		dispose();
+	}
 }

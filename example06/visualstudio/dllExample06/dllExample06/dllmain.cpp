@@ -66,3 +66,10 @@ JNIEXPORT jlong JNICALL Java_example06C_InformationFactory_newInformationNative
     IInformation* info = factory->newInformation(text);
     return (jlong)info;
 }
+
+JNIEXPORT void JNICALL Java_example06C_InformationFactory_dispose
+(JNIEnv* env, jobject obj)
+{
+    IInformationFactory* factory = getHandle<IInformationFactory>(env, obj);
+    delete factory;
+}

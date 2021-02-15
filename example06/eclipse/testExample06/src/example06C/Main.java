@@ -7,7 +7,7 @@ public class Main
 		System.loadLibrary("dllExample06");
 	}
 	
-	public static void main(String[] args) throws NativeCreationException 
+	public static void main(String[] args) throws Exception 
 	{
 		var factory = new InformationFactory();
 		Information info1 = factory.newInformation("Starting information for instance 1.");
@@ -16,6 +16,8 @@ public class Main
 
 		String text1 = info1.getInformation();
 		System.out.println( text1 );
+		
+		factory.close();
 		
 		return;
 	}
