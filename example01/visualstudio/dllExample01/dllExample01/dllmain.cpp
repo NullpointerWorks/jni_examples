@@ -1,6 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
-#include "jni_example01.h"
+#include "jni_example01.hpp"
 #include <iostream>
 
 using namespace std;

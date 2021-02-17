@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "jni_example03.h"
+#include "jni_example03.hpp"
 
 JNIEXPORT jobject JNICALL Java_example03_JNIExample03_getInformation(JNIEnv* env, jobject jobj)
 {

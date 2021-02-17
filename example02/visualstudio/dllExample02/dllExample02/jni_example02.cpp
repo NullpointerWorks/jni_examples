@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "jni_example02.h"
+#include "jni_example02.hpp"
 
 JNIEXPORT void JNICALL Java_example02_JNIExample02_doPrint(JNIEnv* env, jobject jobj)
 {

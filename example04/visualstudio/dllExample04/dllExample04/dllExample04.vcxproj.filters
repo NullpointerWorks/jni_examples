@@ -21,7 +21,7 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="jni_example04.h">
+    <ClInclude Include="jni_example04.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "jni_example04.h"
+#include "jni_example04.hpp"
 
 JNIEXPORT jbyte JNICALL Java_example04_JNIExample04_getByte(JNIEnv* env, jobject jobj)
 {

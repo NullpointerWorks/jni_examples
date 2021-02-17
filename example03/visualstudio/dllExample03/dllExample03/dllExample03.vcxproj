@@ -153,7 +153,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="framework.h" />
-    <ClInclude Include="jni_example03.h" />
+    <ClInclude Include="jni_example03.hpp" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
