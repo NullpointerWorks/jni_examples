@@ -1,2 +1,3 @@
 ﻿  jni_example04.cpp
-  dllExample04.vcxproj -> F:\Development\Cpp\workspace\npw-jni\dllExample04\x64\Debug\dllExample04.dll
+D:\Development\Projects\git\jni_examples\example04\visualstudio\dllExample04\dllExample04\jni_example04.cpp(39,9): warning C4244: 'return': conversion from 'double' to 'jfloat', possible loss of data
+  dllExample04.vcxproj -> D:\Development\Projects\git\jni_examples\example04\visualstudio\dllExample04\x64\Debug\dllExample04.dll

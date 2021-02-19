@@ -39,6 +39,30 @@ JNIEXPORT jint JNICALL Java_example04_JNIExample04_getInteger
 JNIEXPORT jlong JNICALL Java_example04_JNIExample04_getLong
   (JNIEnv *, jobject);
 
+/*
+ * Class:     example04_JNIExample04
+ * Method:    getFloat
+ * Signature: ()F
+ */
+JNIEXPORT jfloat JNICALL Java_example04_JNIExample04_getFloat
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     example04_JNIExample04
+ * Method:    getDouble
+ * Signature: ()F
+ */
+JNIEXPORT jfloat JNICALL Java_example04_JNIExample04_getDouble
+  (JNIEnv *, jobject);
+
+/*
+ * Class:     example04_JNIExample04
+ * Method:    getString
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_example04_JNIExample04_getString
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif
