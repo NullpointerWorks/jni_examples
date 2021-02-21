@@ -30,9 +30,6 @@
     <ClInclude Include="Information.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="InformationFactory.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -42,9 +39,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Information.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InformationFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

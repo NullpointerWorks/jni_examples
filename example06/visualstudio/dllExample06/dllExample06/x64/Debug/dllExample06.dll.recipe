@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>F:\Development\Cpp\workspaces\npw-jni\dllExample06\x64\Debug\dllExample06.dll</FullPath>
+      <FullPath>D:\Development\Projects\git\jni_examples\example06\visualstudio\dllExample06\x64\Debug\dllExample06.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

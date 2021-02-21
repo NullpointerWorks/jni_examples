@@ -1,13 +1,10 @@
 package example06C;
 
-/**
- * Though this simple factory also has a native pointer, it's not necessary in this implementation.
- */
-public class InformationFactory extends NativePointer
+public class InformationFactory
 {
 	public InformationFactory()
 	{
-		initialize();
+		
 	}
 	
 	public Information newInformation(String info) throws NativeCreationException
@@ -17,9 +14,5 @@ public class InformationFactory extends NativePointer
 		else throw new NativeCreationException();
 	}
 	
-	private native void initialize();
 	private native long newInformationNative(String info);
-	
-	@Override
-	protected native void dispose();
 }

@@ -9,14 +9,6 @@ extern "C" {
 #endif
 /*
  * Class:     example06C_InformationFactory
- * Method:    initialize
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_example06C_InformationFactory_initialize
-  (JNIEnv *, jobject);
-
-/*
- * Class:     example06C_InformationFactory
  * Method:    newInformationNative
  * Signature: (Ljava/lang/String;)J
  */

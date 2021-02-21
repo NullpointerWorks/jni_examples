@@ -20,6 +20,20 @@ BOOL APIENTRY DllMain(HMODULE hModule,
 }
 
 /*
+    Header for class example06C_InformationFactory
+*/
+
+JNIEXPORT jlong JNICALL Java_example06C_InformationFactory_newInformationNative
+(JNIEnv* env, jobject obj, jstring init)
+{
+    const char* text = env->GetStringUTFChars(init, 0);
+    IInformation* info = new Information();
+    info->setInformation(text);
+    env->ReleaseStringUTFChars(init,text);
+    return (jlong)info;
+}
+
+/*
     Header for class example06C_Information
 */
 
@@ -46,32 +60,4 @@ JNIEXPORT void JNICALL Java_example06C_Information_dispose
     IInformation* nfo = getHandle<IInformation>(env, obj);
     setHandle(env, obj, 0L);
     delete nfo;
-}
-
-/*
-    Header for class example06C_InformationFactory
-*/
-
-JNIEXPORT void JNICALL Java_example06C_InformationFactory_initialize
-(JNIEnv* env, jobject obj)
-{
-    IInformationFactory* infofactory = new InformationFactory();
-    setHandle(env, obj, infofactory);
-}
-
-JNIEXPORT jlong JNICALL Java_example06C_InformationFactory_newInformationNative
-(JNIEnv* env, jobject obj, jstring init)
-{
-    IInformationFactory* factory = getHandle<IInformationFactory>(env, obj);
-    const char* text = env->GetStringUTFChars(init, 0);
-    IInformation* info = factory->newInformation(text);
-    return (jlong)info;
-}
-
-JNIEXPORT void JNICALL Java_example06C_InformationFactory_dispose
-(JNIEnv* env, jobject obj)
-{
-    IInformationFactory* factory = getHandle<IInformationFactory>(env, obj);
-    setHandle(env, obj, 0L);
-    delete factory;
 }

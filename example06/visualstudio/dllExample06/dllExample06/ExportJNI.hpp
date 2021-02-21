@@ -1,5 +1,25 @@
 #include <jni.h>
 
+/* Header for class example06C_InformationFactory */
+
+#ifndef _Included_example06C_InformationFactory
+#define _Included_example06C_InformationFactory
+#ifdef __cplusplus
+extern "C" {
+#endif
+	/*
+	 * Class:     example06C_InformationFactory
+	 * Method:    newInformationNative
+	 * Signature: (Ljava/lang/String;)J
+	 */
+	JNIEXPORT jlong JNICALL Java_example06C_InformationFactory_newInformationNative
+	(JNIEnv*, jobject, jstring);
+
+#ifdef __cplusplus
+}
+#endif
+#endif
+
 /* Header for class example06_Information */
 
 #ifndef _Included_example06C_Information
@@ -30,42 +50,6 @@ extern "C" {
 	 */
 	JNIEXPORT void JNICALL Java_example06C_Information_dispose
 	(JNIEnv*, jobject);
-
-#ifdef __cplusplus
-}
-#endif
-#endif
-
-/* Header for class example06_InformationFactory */
-
-#ifndef _Included_example06C_InformationFactory
-#define _Included_example06C_InformationFactory
-#ifdef __cplusplus
-extern "C" {
-#endif
-	/*
-	 * Class:     example06_InformationFactory
-	 * Method:    initialize
-	 * Signature: ()V
-	 */
-	JNIEXPORT void JNICALL Java_example06C_InformationFactory_initialize
-	(JNIEnv*, jobject);
-
-	/*
-	 * Class:     example06_InformationFactory
-	 * Method:    newInformationNative
-	 * Signature: (Ljava/lang/String;)J
-	 */
-	JNIEXPORT jlong JNICALL Java_example06C_InformationFactory_newInformationNative
-	(JNIEnv*, jobject, jstring);
-
-	/*
-	 * Class:     example06_InformationFactory
-	 * Method:    dispose
-	 * Signature: ()V
-	 */
-	JNIEXPORT void JNICALL Java_example06C_InformationFactory_dispose
-	(JNIEnv* env, jobject obj);
 
 #ifdef __cplusplus
 }

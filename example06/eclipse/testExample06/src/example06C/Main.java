@@ -29,8 +29,6 @@ public class Main
 		// closing the information instance causes the native memory allocation to be deleted.
 		// The two Java instances still exists, but will eventually be garbage collected.
 		info1.close();
-		factory.close();
-		return;
 	}
 	
 	public static void printInformation(Information inf)
