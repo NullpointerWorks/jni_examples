@@ -1,0 +1,2 @@
+module jniExample07 {
+}
