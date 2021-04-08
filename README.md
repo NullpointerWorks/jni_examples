@@ -1,4 +1,4 @@
-## License: CC BY-SA 4.0
+<a target="_blank" href="https://unlicense.org"><img src="https://unlicense.org/pd-icon.png" alt="Unlicense" width="40"/> Unlicense</a>
 
 # JNI Examples
 A collection of examples of how to implement the Java Native Interface with a C++ written Dynamic Link Library.
