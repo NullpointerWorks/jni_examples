@@ -1,3 +1,5 @@
+## License: CC BY-SA 4.0
+
 # JNI Examples
 A collection of examples of how to implement the Java Native Interface with a C++ written Dynamic Link Library.
 
