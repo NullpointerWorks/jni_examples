@@ -19,15 +19,16 @@ public class Main
 		info1.setInformation("Some new information for instance 1.");
 		
 		// create an object with the same pointer as our original instance
+		// mind you, the line of code below is for testing purposes. The pointer should be hidden from view!
 		Information info2 = new Information( info1.nativePointer );
 		
-		// it should print the newly set information even though it's a new Java instance.
+		// it should print the previously set information even though it's a new Java instance.
 		// the native side doesn't know, nor care, that the pointer has moved from one Java
 		// instance to another. 
 		printInformation(info2);
 		
 		// closing the information instance causes the native memory allocation to be deleted.
-		// The two Java instances still exists, but will eventually be garbage collected.
+		// The two Java instances still exist, but will eventually be garbage collected.
 		info1.close();
 	}
 	

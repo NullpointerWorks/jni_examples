@@ -4,7 +4,6 @@ package example06C;
  * Wrapper class to conceal the native pointer variable from 
  * alteration. Though declared private, it can still be accessed 
  * through JNI.
- * 
  */
 public abstract class NativePointer implements AutoCloseable 
 {

@@ -14,5 +14,6 @@ public class InformationFactory
 		else throw new NativeCreationException();
 	}
 	
+	// this method may be private in Java, but it's still accessible in C++
 	private native long newInformationNative(String info);
 }
