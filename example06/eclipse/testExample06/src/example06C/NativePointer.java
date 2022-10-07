@@ -18,8 +18,16 @@ public abstract class NativePointer implements AutoCloseable
 	
 	protected abstract void dispose();
 	
+	// Use the Autoclosable to make sure memory allocated when using try-with-resource are properly released
 	@Override
 	public final void close() throws Exception 
+	{
+		dispose();
+	}
+	
+	// This method is called before garbage collection. Handy to have it clean up natively allocated memory.
+	@Override
+	public final void finalize()
 	{
 		dispose();
 	}
