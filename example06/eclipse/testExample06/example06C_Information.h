@@ -23,14 +23,6 @@ JNIEXPORT void JNICALL Java_example06C_Information_setInformation
 JNIEXPORT jstring JNICALL Java_example06C_Information_getInformation
   (JNIEnv *, jobject);
 
-/*
- * Class:     example06C_Information
- * Method:    dispose
- * Signature: ()V
- */
-JNIEXPORT void JNICALL Java_example06C_Information_dispose
-  (JNIEnv *, jobject);
-
 #ifdef __cplusplus
 }
 #endif

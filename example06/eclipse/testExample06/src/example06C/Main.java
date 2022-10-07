@@ -9,17 +9,18 @@ public class Main
 	
 	public static void main(String[] args) throws Exception 
 	{
-		var factory = new InformationFactory();
-		
-		// create an instance and print it's text.
-		Information info1 = factory.newInformation("Starting information for instance 1.");
-		printInformation(info1);
+		// the "Information()" constructor triggers the "NativePointer" superclass to request a pointer from the DLL
+		Information info1 = new Information();
 		
 		// alter the text for the next test
 		info1.setInformation("Some new information for instance 1.");
 		
-		// create an object with the same pointer as our original instance
-		// mind you, the line of code below is for testing purposes. The pointer should be hidden from view!
+		// lets verify the string was set and accessible through "info1" instance
+		printInformation(info1);
+		
+		// Create an object with the same pointer as our original instance.
+		// This is obviously not the way to create a new instance. However this demonstrates that the value of the 
+		// long field indeed hold the pointer value to our C++ instance. Normally this field is hidden from view!
 		Information info2 = new Information( info1.nativePointer );
 		
 		// it should print the previously set information even though it's a new Java instance.
@@ -27,9 +28,8 @@ public class Main
 		// instance to another. 
 		printInformation(info2);
 		
-		// closing the information instance causes the native memory allocation to be deleted.
-		// The two Java instances still exist, but will eventually be garbage collected.
-		info1.close();
+		// when all references to your Information objects are lost, they get garbage collected.
+		// the "finalize()" method will then call the native "dispose()" function and delete the allocated memory
 	}
 	
 	public static void printInformation(Information inf)

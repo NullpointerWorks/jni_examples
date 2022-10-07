@@ -5,25 +5,24 @@ package example06C;
  * alteration. Though declared private, it can still be accessed 
  * through JNI.
  */
-public abstract class NativePointer implements AutoCloseable 
+public abstract class NativePointer
 {
 	@SuppressWarnings("unused")
 	long nativePointer = 0; // make private after testing
 	
-	public NativePointer() {}
+	public NativePointer() throws NativeCreationException
+	{
+		make();
+		if (nativePointer <= 0) throw new NativeCreationException();
+	}
+	
 	public NativePointer(long ptr) 
 	{
 		nativePointer = ptr;
 	}
 	
-	protected abstract void dispose();
-	
-	// Use the Autoclosable to make sure memory allocated when using try-with-resource are properly released
-	@Override
-	public final void close() throws Exception 
-	{
-		dispose();
-	}
+	protected native void make();
+	protected native void dispose();
 	
 	// This method is called before garbage collection. Handy to have it clean up natively allocated memory.
 	@Override
